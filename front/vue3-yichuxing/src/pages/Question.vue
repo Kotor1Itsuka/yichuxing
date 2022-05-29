@@ -1,11 +1,11 @@
 <template>
-
+  <h1>问疫问</h1>
 </template>
 
 <script>
-    export default {
+export default {
 
-    }
+}
 </script>
 
 <style>
