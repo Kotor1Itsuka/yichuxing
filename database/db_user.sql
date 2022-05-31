@@ -11,7 +11,7 @@
  Target Server Version : 80028
  File Encoding         : 65001
 
- Date: 29/05/2022 14:16:33
+ Date: 31/05/2022 21:03:27
 */
 
 SET NAMES utf8mb4;
@@ -34,8 +34,9 @@ CREATE TABLE `db_user`  (
   `gmt_modified` bigint(0) NOT NULL COMMENT '用户最后登录时间',
   `disable` int(0) NOT NULL DEFAULT 0 COMMENT '用户封禁状态',
   `user_status` int(0) NOT NULL DEFAULT 0 COMMENT '用户在线状态',
+  `user_phone` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '用户手机',
   PRIMARY KEY (`user_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of db_user
