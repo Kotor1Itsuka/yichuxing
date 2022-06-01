@@ -9,7 +9,7 @@ app.use(router)
 import store from '@/store'
 app.use(store)
 
-import { NavBar, Button, Col, Row, Swipe, SwipeItem, Icon, Area } from 'vant';
+import { NavBar, Button, Col, Row, Swipe, SwipeItem, Icon, Area, Field, CellGroup, Popup  } from 'vant';
 app.use(NavBar)
 app.use(Button)
 app.use(Col)
@@ -18,7 +18,9 @@ app.use(Swipe)
 app.use(SwipeItem)
 app.use(Icon)
 app.use(Area)
-
+app.use(Field);
+app.use(CellGroup);
+app.use(Popup);
 
 app.mount('#app')
 

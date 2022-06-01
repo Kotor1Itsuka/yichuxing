@@ -1,10 +1,15 @@
 <template>
 	<div class="all-container">
 		<van-nav-bar 
+			:title="title"
+			v-show="!show"
+		/>
+		<van-nav-bar 
 			:title="title" 
 			left-text="返回" 
 			left-arrow 
 			@click-left="onClickLeft" 
+			v-show="show"
 		/>
 		<router-view></router-view>
 	</div>
@@ -17,6 +22,12 @@
         setup(){
             const router = useRouter()
 			const route = useRoute()
+			let show = computed(() => {
+				if(route.name != 'Login' && route.name != 'Home'){
+					return true
+				}
+				return false
+			})
             function onClickLeft(){
 				if(route.name !== 'Home'){
 					router.go(-1)
@@ -25,7 +36,8 @@
             let title = computed(() => route.meta.describe)
             return {
                 onClickLeft,
-                title
+                title,
+				show
             }
         }
     }
