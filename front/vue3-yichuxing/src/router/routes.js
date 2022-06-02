@@ -2,7 +2,7 @@
 import Home from '../pages/Home'
 import Forum from '../pages/Forum'
 import Journey from '../pages/Journey'
-import Question from '../pages/Question'
+import Administrator from '../pages/Administrator'
 import Login from '../pages/Login'
 export default [
     {
@@ -26,13 +26,13 @@ export default [
         name: 'Journey',
         path: '/journey', 
         component: Journey,
-        meta:{describe: '疫出行'}
+        meta:{describe: '疫行宝典'}
     },
     {
-        name: 'Question',
-        path: '/question', 
-        component: Question,
-        meta:{describe: '问疫问'}
+        name: 'Administrator',
+        path: '/administrator', 
+        component: Administrator,
+        meta:{describe: '管理员'}
     },
     {
         name: 'Login',

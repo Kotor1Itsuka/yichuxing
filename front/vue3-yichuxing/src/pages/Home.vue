@@ -14,7 +14,7 @@
                 <van-icon size="100px"
                     name="https://img1.baidu.com/it/u=73290,3378048527&fm=253&fmt=auto&app=138&f=JPEG?w=380&h=400" />
                 <br>
-                <span>疫出行</span>
+                <span>疫行宝典</span>
             </div>
         </van-col>
         <van-col span="8">
@@ -26,11 +26,11 @@
             </div>
         </van-col>
         <van-col span="8">
-            <div class="icon-container" @click="pushToRoute('Question')">
+            <div class="icon-container" @click="pushToRoute('Administrator')">
                 <van-icon size="100px"
                     name="https://img0.baidu.com/it/u=515753124,774182641&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" />
                 <br>
-                <span>问疫问</span>
+                <span>管理员</span>
             </div>
         </van-col>
     </van-row>

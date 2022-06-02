@@ -8,13 +8,15 @@
         </van-cell-group>
         <van-button round type="primary" size="normal" @click="login()">登陆</van-button>
         <van-button round type="primary" size="normal" @click="showChange()">注册</van-button>
-        <h2 style="color: red;" v-show="h2show">账号或密码错误</h2>
     </div>
+    
     <van-popup
         v-model:show="show"
         closeable
+        round
         position="bottom"
-        :style="{ height: '60%' }"
+        style="height:60%;"
+        class="all-container"
     >
         <div class="login-container">
             <h1>注册</h1>
@@ -38,24 +40,20 @@
             const registerUsername = ref('');
             const registerPassword = ref('');
             const show = ref(false);
-            const h2show = ref(false)
+
             function showChange(){
-                if(show.value){
-                    show.value = false
-                }
-                else show.value = true
+                show.value = !show.value
             }
             function login(){
                 if(username.value == '123' && password.value == '123'){
-                    console.log(123);
                     router.push('/home')
                 }
                 else {
-                    h2show.value = true
+                    alert('登陆失败(账号密码均为123)')
                 }
             }
             function register(){
-
+                alert('注册成功')
             }
             return { 
                 username,
@@ -66,7 +64,7 @@
                 register,
                 registerUsername,
                 registerPassword,
-                h2show
+                
             };
         },
     };
