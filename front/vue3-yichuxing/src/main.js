@@ -10,7 +10,7 @@ import store from '@/store'
 app.use(store)
 
 import { NavBar, Button, Col, Row, Swipe, SwipeItem, Collapse, CollapseItem,
-    Icon, Area, Field, CellGroup, Popup, ContactCard, ContactList, Card } from 'vant';
+    Icon, Area, Field, CellGroup, Popup, ContactCard, ContactList, Card, Skeleton } from 'vant';
 app.use(NavBar)
 app.use(Button)
 app.use(Col)
@@ -27,6 +27,7 @@ app.use(ContactList)
 app.use(Card)
 app.use(CollapseItem)
 app.use(Collapse)
+app.use(Skeleton)
 
 app.mount('#app')
 

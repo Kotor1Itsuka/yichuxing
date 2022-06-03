@@ -1,24 +1,7 @@
 # vue3-yichuxing
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 开发进程简述:
+- 5-29 19:55，已完成前端导航页面的开发，部分完成疫行宝典页面的开发，城市选择的组件遇见一些问题待解决
+- 6-1 14:00，已完成前端疫行宝典页面的开发
+- 6-3 15:50， 已完成前端疫行者论坛和问疫问页面的开发
+- 6-6 9:21，删除问疫问页面，提问功能合并到疫行者论坛页面
+- 6-7 22:40，增加管理员页面

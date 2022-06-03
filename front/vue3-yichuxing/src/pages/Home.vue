@@ -9,7 +9,7 @@
         </van-col>
     </van-row>
     <van-row>
-        <van-col span="8">
+        <van-col span="12">
             <div class="icon-container" @click="pushToRoute('Journey')">
                 <van-icon size="100px"
                     name="https://img1.baidu.com/it/u=73290,3378048527&fm=253&fmt=auto&app=138&f=JPEG?w=380&h=400" />
@@ -17,7 +17,7 @@
                 <span>疫行宝典</span>
             </div>
         </van-col>
-        <van-col span="8">
+        <van-col span="12">
             <div class="icon-container" @click="pushToRoute('Forum')">
                 <van-icon size="100px"
                     name="https://img1.baidu.com/it/u=3291052729,3557635525&fm=253&fmt=auto?w=800&h=800" />
@@ -25,12 +25,22 @@
                 <span>疫行者论坛</span>
             </div>
         </van-col>
-        <van-col span="8">
+    </van-row>
+    <van-row>
+        <van-col span="12">
             <div class="icon-container" @click="pushToRoute('Administrator')">
                 <van-icon size="100px"
                     name="https://img0.baidu.com/it/u=515753124,774182641&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" />
                 <br>
                 <span>管理员</span>
+            </div>
+        </van-col>
+        <van-col span="12">
+            <div class="icon-container" @click="pushToRoute('Login')">
+                <van-icon size="100px"
+                    name="https://img1.baidu.com/it/u=228672556,3027878005&fm=253&fmt=auto&app=138&f=JPEG?w=256&h=256" />
+                <br>
+                <span>退出登陆</span>
             </div>
         </van-col>
     </van-row>
@@ -63,7 +73,9 @@
 
             function pushToRoute(name) {
                 console.log(name)
-                router.push({name})
+                router.push({
+                    name
+                })
             }
             return {
                 imgs,
@@ -76,14 +88,15 @@
 <style scoped lang="less">
     img {
         width: 100%;
-        height: 6in;
+        height: 3.5in;
     }
 
     .icon-container {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        span{
+
+        span {
             display: inline-block;
             text-align: center;
             width: 100%;
