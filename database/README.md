@@ -2,6 +2,10 @@
 
 ---
 
+- ## E-R图
+
+![](https://community-1304870863.cos.ap-nanjing.myqcloud.com/%E6%97%A5%E7%94%A8/24b4192deb20f5d5dc82cb446b603fb.png)
+
 - ## db_user
 
   |    字段名    |  类型   | 是否为null |       注释       |
