@@ -1,3 +1,5 @@
+
+
 # 数据库设计
 
 ---
@@ -29,8 +31,8 @@
   |    字段名     |  类型   | 是否为null |     注释     |
   | :-----------: | :-----: | :--------: | :----------: |
   |    city_id    | bigint  | 主键,非空  |    城市id    |
-  |   city_name   | varchar |  可以为空  |   城市名称   |
-  | city_location | varchar |  可以为空  |   城市位置   |
+  |   city_name   | varchar |    非空    |   城市名称   |
+  | city_location | varchar |    非空    |   城市位置   |
   |  city_status  | varchar |  可以为空  | 城市疫情状态 |
   |   city_area   | varchar |  可以为空  | 城市风险区域 |
   |   city_desc   | varchar |  可以为空  |   城市介绍   |
@@ -70,7 +72,7 @@
   |    字段名     |  类型   | 是否为null |      注释      |
   | :-----------: | :-----: | :--------: | :------------: |
   |      id       | bigint  | 主键,非空  |     问题id     |
-  |     title     | varchar |  可以为空  |    问题标题    |
+  |     title     | varchar |    非空    |    问题标题    |
   |  description  |  text   |  可以为空  |    问题描述    |
   |  gmt_create   | bigint  |  可以为空  |  问题创建时间  |
   | gmt_modified  | bigint  |  可以为空  |  问题修改时间  |
@@ -79,3 +81,42 @@
   |  view_count   |   int   |  可以为空  |     阅读量     |
   |  like_count   |   int   |  可以为空  |     点赞数     |
   |      tag      | varchar |  可以为空  |    问题标签    |
+
+- ## db_delete
+
+  |   字段名   |  类型  | 是否为null |     注释     |
+  | :--------: | :----: | :--------: | :----------: |
+  |     id     | bigint | 主键，非空 |  删除记录id  |
+  |   actor    | bigint | 外键，非空 |   管理员id   |
+  |   aimer    |  int   | 外键，非空 | 被删除用户id |
+  |    type    | bigint |    非空    |   删除类型   |
+  | gmt_create | bigint |  可以为空  |   删除时间   |
+  |   status   | bigint |  可以为空  | 删除执行状态 |
+  |   reason   | bigint |    非空    |   删除原因   |
+
+- ## db_banner
+
+  |   字段名   |  类型  | 是否为null |     注释     |
+  | :--------: | :----: | :--------: | :----------: |
+  |     id     | bigint | 主键，非空 |  封禁记录id  |
+  |   actor    | bigint | 外键，非空 |   管理员id   |
+  |   aimer    |  int   | 外键，非空 | 被封禁用户id |
+  |    type    | bigint |    非空    |   封禁类型   |
+  | gmt_create | bigint |  可以为空  |   封禁时间   |
+  |  banTime   | bigint |    非空    |   封禁时长   |
+  |   status   | bigint |  可以为空  | 封禁执行状态 |
+  |   reason   | bigint |    非空    |   封禁原因   |
+
+- ## db_search
+
+  |   字段名   |  类型  | 是否为null |     注释     |
+  | :--------: | :----: | :--------: | :----------: |
+  |     id     | bigint | 主键，非空 |  查询记录id  |
+  |   actor    | bigint | 外键，非空 |  查询用户id  |
+  |  aimerId   |  int   | 外键，非空 | 被查询对象id |
+  |    type    | bigint |  可以为空  |   查询类型   |
+  | gmt_create | bigint |  可以为空  |   查询时间   |
+  |   status   | bigint |  可以为空  | 查询执行状态 |
+  |  content   | bigint |    非空    |   查询内容   |
+
+## 

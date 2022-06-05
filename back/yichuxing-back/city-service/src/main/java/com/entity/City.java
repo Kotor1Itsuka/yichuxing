@@ -8,8 +8,8 @@ import lombok.Data;
 @Data
 @TableName(value = "db_user")
 public class City {
-    Integer uid;
-    String name;
-    Integer age;
-    String sex;
+    Integer cid;
+    String cityName;
+    String cityLocation ;
+    String cityStatus;
 }
