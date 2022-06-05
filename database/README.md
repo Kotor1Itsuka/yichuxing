@@ -3,6 +3,10 @@
 # 数据库设计
 
 ---
+## 数据库角色设计：
+- 信息查询角色：对除db_user以外的表格拥有select权限
+- 城市信息管理角色：可以select、update、insert、delete表格db_city
+- 论坛信息管理角色：可以select、update、insert、delete表格db_city
 
 - ## E-R图
 
