@@ -18,6 +18,8 @@
 |  ----   | ----  |  --  | ----  |
 | permission  | boolean | false  | 账号 |
 | reason  | string | 账号或密码错误  | 密码 |
+
+- ### 请求示例
 ```json
 {
     "code": 200,
