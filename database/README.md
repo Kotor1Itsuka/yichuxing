@@ -17,7 +17,8 @@
   |    字段名    |  类型   | 是否为null |       注释       |
   | :----------: | :-----: | :--------: | :--------------: |
   |   user_id    | bigint  | 主键,非空  |      用户id      |
-  |  user_name   | varchar |  可以为空  |      用户名      |
+  |  user_name   | varchar |    非空    |      用户名      |
+  |   password   | varchar |    非空    |     用户密码     |
   |   user_sex   | varchar |  可以为空  |     用户性别     |
   |  user_city   | varchar |  可以为空  |     用户城市     |
   |  user_code   | varchar |  可以为空  |  用户行程码状态  |
