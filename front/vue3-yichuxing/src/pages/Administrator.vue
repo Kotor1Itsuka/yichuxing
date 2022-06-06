@@ -1,4 +1,11 @@
 <template>
+	 <van-cell-group inset>
+        <van-field v-model="sms" center clearable placeholder="请输入筛选的时间或关键字">
+            <template #button>
+                <van-button size="small" type="primary">点击筛选</van-button>
+            </template>
+        </van-field>
+    </van-cell-group>
 	<h2>被举报的用户</h2>
 	<van-collapse v-model="activeNames">
 		<van-collapse-item title="用户1" name="1">

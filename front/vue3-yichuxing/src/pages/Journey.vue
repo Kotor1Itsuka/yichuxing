@@ -10,6 +10,10 @@
         <van-button icon="plus" type="primary" size="large" @click="query()">查询</van-button>
         <div class="result" v-show="resuletShow">
             <h1>此处是查询结果</h1>
+            <li v-for="city in cities" :key="city" style="width:100;text-align: left;">
+                <span style="color:blue;font-size: large;">{{city}}</span><br>
+                阳性人数，新增确诊，健康码，行程码，进城要求，出城要求，隔离政策。。。
+            </li>
         </div>
         <van-popup
             v-model:show="show"
