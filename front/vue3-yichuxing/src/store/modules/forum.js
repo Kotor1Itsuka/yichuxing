@@ -1,22 +1,66 @@
-export default{
-    namespaced:true,
-    state:{
-        routes:[
-            {describe:'微博热搜历史查询', path:'/weibo',name:'WeiBo'},
-            {describe:'数独计算器', path:'/shudu',name:'ShuDu'},
-            {describe:'空的home', path:'/home',name:'Home'},
-            {describe:'空的about', path:'/about',name:'About'},
-            
+import Home from '../../pages/Home'
+import Forum from '../../pages/Forum'
+import Journey from '../../pages/Journey'
+import Administrator from '../../pages/Administrator'
+import Login from '../../pages/Login'
+export default {
+    namespaced: true,
+    state: {
+        routes: [{
+                name: 'Home',
+                path: '/home',
+                component: Home,
+                meta: {
+                    describe: '导航页'
+                }
+            },
+            {
+                path: '/', //当路径为'/'时，会自动定位到login,即重定向
+                redirect: '/login'
+                // redirect: { name: 'Home' } //也可以使用命名路由
+            },
+            {
+                name: 'Forum',
+                path: '/forum',
+                component: Forum,
+                meta: {
+                    describe: '疫行者论坛'
+                }
+            },
+            {
+                name: 'Journey',
+                path: '/journey',
+                component: Journey,
+                meta: {
+                    describe: '疫行宝典'
+                }
+            },
+            {
+                name: 'Administrator',
+                path: '/administrator',
+                component: Administrator,
+                meta: {
+                    describe: '管理员'
+                }
+            },
+            {
+                name: 'Login',
+                path: '/login',
+                component: Login,
+                meta: {
+                    describe: '登陆'
+                }
+            },
         ]
     },
-    mutations:{
+    mutations: {
 
     },
-    actions:{
+    actions: {
 
     },
-    getters:{
-        routes(state){
+    getters: {
+        routes(state) {
             return state.routes
         }
     }
