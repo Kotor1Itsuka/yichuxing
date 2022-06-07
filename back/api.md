@@ -182,4 +182,41 @@
     }
 }
 ```
+## 6、浏览论坛接口
+
+- ### 请求地址
+
+>接口地址：baseUrl/browseForums
+>请求示例：baseUrl/browseForums
+>支持协议：http/https
+>请求方式：post返回格式：utf-8 json
+
+- ### 请求参数
+
+| 名称     | 类型   | 示例         | 说明     |
+| -------- | ------ | ------------ | -------- |
+| userName | string | Kotor1Itsuka | 用户账号 |
+| password | string | 12345678a    | 密码     |
+
+- ### 返回参数
+
+| 名称       | 类型   | 示例                   | 说明             |
+| ---------- | ------ | ---------------------- | ---------------- |
+| permission | string | false                  | 账号密码是否合法 |
+| reason     | string | 账号或密码错误         | 错误信息         |
+| post       | string | 关于目前疫情形势的看法 | 帖子的内容       |
+
+- ### 返回示例
+
+```json
+{
+    "code": 200,
+    "msg": "success",
+    "value": 
+    {
+      "permission": "false",
+      "reason": "账号或密码错误"
+    }
+}
+```
 ## 
