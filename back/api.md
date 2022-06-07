@@ -112,5 +112,41 @@
     }
 }
 ```
+## 4、绑定手机号接口
+
+- ### 请求地址
+
+>接口地址：baseUrl/bindPhone
+>请求示例：baseUrl/bindPhone
+>支持协议：http/https
+>请求方式：post返回格式：utf-8 json
+
+- ### 请求参数
+
+| 名称     | 类型   | 示例         | 说明   |
+| -------- | ------ | ------------ | ------ |
+| userName | string | Kotor1Itsuka | 账号   |
+| phone    | string | 33322221111  | 手机号 |
+
+- ### 返回参数
+
+| 名称       | 类型    | 示例             | 说明         |
+| ---------- | ------- | ---------------- | ------------ |
+| permission | boolean | false            | 是否绑定成功 |
+| reason     | string  | 手机号格式不正确 | 原因         |
+
+- ### 返回示例
+
+```json
+{
+    "code": 200,
+    "msg": "success",
+    "value": 
+    {
+      "permission": "false",
+      "reason": "手机号格式不正确"
+    }
+}
+```
 
 ## 
