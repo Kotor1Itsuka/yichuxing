@@ -10,14 +10,14 @@
 - ### 请求参数
 |  名称   | 类型  | 示例   | 说明  |
 |  ----   | ----  |  --  | ----  |
-| userName | string | daluan2000 | 用户名 |
+| userName | string | daluan2000 | 账号 |
 | password  | string | abcdefg  | 密码 |
 
 - ### 返回参数
 |  名称   | 类型  | 示例   | 说明  |
 |  ----   | ----  |  --  | ----  |
-| permission  | boolean | false  | 账号 |
-| reason  | string | 账号或密码错误  | 密码 |
+| permission  | boolean | false  | 是否允许登陆 |
+| reason  | string | 账号或密码错误  | 原因 |
 
 - ### 返回示例
 ```json
