@@ -361,4 +361,40 @@
     }
 }
 ```
+
+## 11、撤销评论接口
+
+- ### 请求地址
+
+>接口地址：baseUrl/revokeComment
+>请求示例：baseUrl/revokeComment
+>支持协议：http/https
+>请求方式：post返回格式：utf-8 json
+
+- ### 请求参数
+
+| 名称      | 类型   | 示例         | 说明     |
+| --------- | ------ | ------------ | -------- |
+| userName  | string | Kotor1Itsuka | 用户账号 |
+| postId    | string | 1008611      | 帖子id   |
+| commentId | string | 10001        | 评论id   |
+
+- ### 返回参数
+
+| 名称       | 类型   | 示例 | 说明         |
+| ---------- | ------ | ---- | ------------ |
+| permission | string | true | 是否撤销成功 |
+
+- ### 返回示例
+
+```json
+{
+    "code": 200,
+    "msg": "success",
+    "value": 
+    {
+      "permission": "true",
+    }
+}
+```
 ## 
